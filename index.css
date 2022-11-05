@@ -2,6 +2,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    margin: 4em;
 }
 
 .everything{
@@ -10,7 +11,7 @@ body{
 }
 i{
     min-width: 300px;
-    margin-bottom: 1em;
+    margin: 1em;
     color: rgb(0, 0, 224);
 }
 
@@ -19,6 +20,7 @@ h1{
     font-size: 1.25em;
     font-weight: lighter;
     margin-bottom: 2em;
+    margin-left: 1em;
 }
 
 .userform{
@@ -27,7 +29,7 @@ h1{
     text-align: left;
     border: solid 1px rgb(224, 224, 224);
     width: 25vw;
-    padding: 1em;
+    padding: 2em;
     justify-content: center;
     border-radius: .5em;
 }
@@ -39,19 +41,24 @@ input{
     border: solid 1px rgb(224, 224, 224);
     padding: .5em;
     margin: .1em;
+    padding-left: 1em;
 }
 
-input:focus{
-    border: solid 2px rgb(87, 127, 239);
+*:focus {
+    outline: none;
+}
+
+input:focus-visible{
+    border: dashed 1px rgb(0, 0, 171);
 }
 
 button{
-    background-color: rgb(87, 127, 239);
+    background-color: rgb(0, 0, 224);
     color: rgb(255, 255, 255);
     border-radius: .5em;
     padding: 1em;
     border: 0px;
 }
 button:hover{
-    background-color: rgb(69, 113, 234);
+    background-color: rgb(0, 0, 171);
 }
