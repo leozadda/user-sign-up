@@ -9,6 +9,7 @@ function getUser(){
     phone = document.getElementById('phone').value;
     ssn = document.getElementById('ssn').value;
 
+
 // 2.  Validate and format Input
     // Check if first and last name are words
     if(fname.match(/[a-z]|[A-Z]/g) != null && fname.match(/[a-z]|[A-Z]/g) != null){
@@ -16,11 +17,11 @@ function getUser(){
         //Only first letter is uppercase   
         fname = fname.toLowerCase();
         lname = lname.toLowerCase();
-        fname = fname.charAt(0).toUpperCase() + fname.slice(1, snn.length-1);
-        fname = fname.charAt(0).toUpperCase() + lname.slice(1, snn.length-1);
+        fname = fname.charAt(0).toUpperCase() + fname.slice(1, fname.length - 1);
+        fname = fname.charAt(0).toUpperCase() + lname.slice(1, lname.length - 1);
 
         console.log("Cool name", fname, lname);
-    } else{
+    }else{
         console.log("That's not your name lol");
     }
 
@@ -32,7 +33,8 @@ function getUser(){
     // Turn "123-45-6789" into "123456789"
             console.log("That SSN works!", ssn.replace(/-/g, ""));
         }
-        
+
+
     // Just check if email has text/digit plus @  text.com/net/edu/org
         if(email.match(/(\d|\w)-@-(\d|\w)-.-(\d|\w)/g) != null){
             console.log("That email works!", email);
@@ -41,13 +43,11 @@ function getUser(){
         }
 
 
-    // Check if phone is format "123456789"
-        if(phone.match(/\d\d\d\d\d\d\d\d\d/g) != null){
+    // Check if phone is format "3121234123"
+        if(phone.match(/\d\d\d\d\d\d\d\d\d\d\d/g) != null){
     // Turn "123-45-6789" into "(123)456-789"
-            ssn = phone.insert(ssn, "(", 0);
-            ssn = phone.insert(ssn, ")", 4);
-            ssn = phone.insert(ssn, "-", 8);
-            console.log("That phone number works.", ssn);
+            phone = "(" + phone.slice(0, 2) + ")" + phone.slice(3, 5) + "-" + phone.slice(6, 9)
+            console.log("That phone number works.", phone);
         } else{
             console.log("Must be format \"123456789\"")
         }
@@ -67,5 +67,5 @@ function getUser(){
     console.log(jsonPerson);
 
     //send data to server (fetch POST)
-        //need to do
+        //need to doq
 }
