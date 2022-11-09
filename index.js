@@ -2,15 +2,23 @@
 
 function getUser(){
 
-    //Collect user data
+//Collect user data
     fname = document.getElementById('fname').value;
     lname = document.getElementById('lname').value;
     email = document.getElementById('email').value;
     phone = document.getElementById('phone').value;
     ssn = document.getElementById('ssn').value;
 
-    //Check if value is valid with regular expression (accept multiple formats)
-        //need to do
+    console.log(ssn.match(/[0-9]/g));
+//Check if value is valid with regular expression (accept multiple formats)
+    //match() method returns null if no match is found. search() searches for a match, and returns the position of the match. replace() returns a modified string where the pattern is replaced.
+    if (ssn.match(/\d\d\d-\d\d-\d\d\d\d/) == null){
+        console.log("Plese use format 123-45-6789");
+   } else{
+        console.log("That works!");
+    }
+    
+    
 
     //Capiltalize the users name, format his phone, format ssn with regex functions
         //need to do
