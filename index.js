@@ -17,10 +17,10 @@ function getUser(){
         //Only first letter is uppercase   
         fname = fname.toLowerCase();
         lname = lname.toLowerCase();
-        fname = fname.charAt(0).toUpperCase() + fname.slice(1, fname.length - 1);
-        fname = fname.charAt(0).toUpperCase() + lname.slice(1, lname.length - 1);
+        fname = fname.charAt(0).toUpperCase() + fname.slice(1, fname.length);
+        lname = lname.charAt(0).toUpperCase() + lname.slice(1, lname.length);
 
-        console.log("Cool name", fname, lname);
+        console.log("Hello", fname, lname);
     }else{
         console.log("That's not your name lol");
     }
@@ -35,31 +35,31 @@ function getUser(){
         }
 
 
-    // Just check if email has text/digit plus @  text.com/net/edu/org
-        if(email.match(/(\d|\w)-@-(\d|\w)-.-(\d|\w)/g) != null){
+    //Just check if email has text/digit plus @  text.com/net/edu/org
+        if(email.match(/(\d|\w)+[@](\d|\w)+[.](\w)*/g) != null){
             console.log("That email works!", email);
         }else{
             console.log("Not a valid email")
         }
 
 
-    // Check if phone is format "3121234123"
-        if(phone.match(/\d\d\d\d\d\d\d\d\d\d\d/g) != null){
-    // Turn "123-45-6789" into "(123)456-789"
-            phone = "(" + phone.slice(0, 2) + ")" + phone.slice(3, 5) + "-" + phone.slice(6, 9)
+    //Check if phone is format "3121234123"
+        if(phone.match(/\d\d\d\d\d\d\d\d\d\d/g) != null){
+    //Turn "123456789" into "(123)456-789"
+            phone = "(" + phone.slice(0, 3) + ")" + phone.slice(3, 6) + "-" + phone.slice(6, 10)
             console.log("That phone number works.", phone);
         } else{
-            console.log("Must be format \"123456789\"")
+            console.log("Must be format \"123456789\"",)
         }
 
 
     //turn data into object
     let person = {
-    "first name": fname,
-    "last name": lname,
+    "fname": fname,
+    "lname": lname,
     "email": email,
-    "phone number": phone,
-    "social security number": ssn
+    "phone": phone,
+    "ssn": ssn
     }
 
     //When sending data to a web server, the data has to be a string.
