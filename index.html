@@ -10,16 +10,20 @@
     <form class="userform">
         <i class="gg-ericsson"></i>
         <h1>Create a New Account</h1>
-        <input type="text" id="fname" placeholder="First Name">
+        <p id="fnameError"></p>
+        <input type="text" id="fname" placeholder="First Name" oninput="checkFirstName()">
         <br>
-        <label></label>
-        <input type="text" id="lname" placeholder="Last Name">
+        <p id="lnameError"></p>
+        <input type="text" id="lname" placeholder="Last Name" oninput="checkLastName()">
         <br>
-        <input type="text" id="email" placeholder="Email">
+        <p id="emailError"></p>
+        <input type="text" id="email" placeholder="Email" oninput="checkEmail()">
         <br>
-        <input type="text" id="phone" placeholder="Phone Number">
+        <p id="numError"></p>
+        <input type="text" id="phone" placeholder="Phone Number" oninput="checkPhone()">
         <br>
-        <input type="text" id="ssn" placeholder="Social Security Number">
+        <p id="ssnError"></p>
+        <input type="text" id="ssn" placeholder="SSN" oninput="checkSSN()">
         <br>
         <button type="button" onclick="getUser()" value = "Submit">Submit</button>
     </form>

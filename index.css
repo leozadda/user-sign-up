@@ -3,11 +3,25 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 4em;
+    background-color: rgb(0, 0, 0);
+}
+
+p{
+    font-size: .75em;
+    font-style: italic;
+    font-weight: lighter;
+    color: blue;
+    text-align: left;
+    padding-left: 1em;
+    padding-top: 0;
+    padding-bottom: .5em;
+    margin: 0;
 }
 
 .everything{
     display: inline-grid;
     grid-template-columns: auto;
+    border-color: aliceblue;
 }
 i{
     min-width: 300px;
@@ -32,6 +46,7 @@ h1{
     padding: 2em;
     justify-content: center;
     border-radius: .5em;
+    background-color: rgb(255, 255, 255);
 }
 
 
